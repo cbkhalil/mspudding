@@ -1,0 +1,206 @@
+
+<head>
+	<title>MsPudding Blog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:url"               	content="http://mspudding.com/blog-homepage.html" />
+	<meta property="og:type"              	content="website" />
+	<meta property="og:title"             	content="MsPudding: A Blog of Delicious Proportions" />
+	<meta property="og:description"       	content="Travel, food adventures, and ambitious learning projects in the life of a girl whose life was once ruled by videogames." />
+	<meta property="fb:app_id"				content="1739146419678054" />
+	
+	<meta property="og:image"             	content="http://mspudding.com/Images/Banners/cheesecake-banner.jpg" />
+	<meta property="og:image:height" 		content="521" />
+	<meta property="og:image:width" 		content="1072" />
+	
+	<meta property="og:image"             	content="http://mspudding.com/Images/santaMonica-sm-thumbnail.jpg" />
+	<meta property="og:image:height" 		content="320" />
+	<meta property="og:image:width" 		content="320" />
+
+	<meta property="og:image"             	content="http://mspudding.com/Images/castleRock-sm-thumbnail.jpg" />
+	<meta property="og:image:height" 		content="320" />
+	<meta property="og:image:width" 		content="320" />
+	
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Stylesheet for blog text formatting! Use with class="blog-body" -->
+	<link rel="stylesheet" href="blog-stylesheet.css">
+	<link rel="stylesheet" href="stylesheet.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Google Analytics tracking -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-79084411-1', 'auto');
+		ga('send', 'pageview');
+	</script>	
+
+</head>
+
+<style>
+.blog-previews {
+	background-color: #F0EDE8;
+	padding: 40px 0px 40px 0px;
+	width: 700px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+
+.blog-preview-box {
+	height: 215px;
+	width: 300px;
+	background-color: white;
+	display: inline-block;
+	margin: 10px 23px;
+	border-radius: 4px 4px 0px 0px;
+	overflow: hidden;
+	border-top: 1px solid #e0e0e0;
+	border-right:  1px solid #e0e0e0;
+	border-left:  1px solid #e0e0e0;
+	border-bottom: 5px solid #494949;
+}
+
+.blog-preview-box:hover {
+	border-bottom: 5px solid #0CADBF;
+}
+
+.blog-preview-image {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.blog-preview-title {
+	color: rgba(0, 0, 0, 0.8);
+	display: block;
+	font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: -0.616px;
+	text-align: center;
+	margin: 0px;
+	word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+
+.blog-preview-text {
+	font-size: 11px;
+	text-align: center;
+	margin: 8px 5px 0px 5px;
+	line-height: normal;
+	display: block;
+    letter-spacing: -.004em;
+	font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    color: black;
+}
+
+.blog-previews a, .blog-previews a:hover {
+	text-decoration: none;
+}
+
+@media (max-width: 700px) {
+	.blog-previews {
+		width: 100%;
+	}
+
+	.blog-preview-image, .blog-preview-box {
+		width: 300px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.blog-preview-box {
+		border-bottom: 5px solid #0CADBF;
+	}
+}
+</style>
+
+<body>
+<!-- Navbar -->
+	<div class="navbarLoad"></div>
+	<script>
+		$(document).ready(function() {
+			$(".navbarLoad").load("navbar.html");
+		});
+	</script>
+
+	<br><br><br>
+	<section class="blog-body">
+		<p class="centerQuote">Welcome to my blog! The part of the site is very WIP, but I hope you'll enjoy sharing in my love for cuisine, fitness, and challenges in self improvement :)</p>
+	</section>
+	<!-- Blog preview link boxes -->
+	<div class="blog-previews">
+		<a href="duckfriedrice.html">
+			<div class="blog-preview-box">
+				<img class="blog-preview-image" src="Images/Banners/friedrice-banner.jpg">
+				<p class="blog-preview-title">Healthified: Duck Fried Rice!</p>
+				<p class="blog-preview-text">This duck fried rice is nutty, spicy, and soaked through with the flavor and aroma of Chinese duck.</p>
+			</div>
+		</a>
+		<a href="cardiomynemesis.html">
+			<div class="blog-preview-box">
+				<img class="blog-preview-image" src="Images/Banners/mountaintrail-banner.jpg">
+				<p class="blog-preview-title">I Can't Run a Mile</p>
+				<p class="blog-preview-text">Well, I couldn’t until yesterday. It took me 27 years to realize I’ve been running too fast.</p>
+			</div>
+		</a>
+		<a href="mythoughtsonfood.html">
+			<div class="blog-preview-box">
+				<img class="blog-preview-image" src="Images/Banners/mewithcorn-banner.jpg">
+				<p class="blog-preview-title">On Weight Loss: Building Healthy Habits</p>
+				<p class="blog-preview-text">My thoughts on food, and how I changed my relationship with it to improve my health.</p>
+			</div>
+		</a>
+		<a href="https://medium.com/@MsPudding/feb-30-day-challenge-the-vegan-diet-and-how-it-s-changing-me-fd51ea3c988#.xf8xg38fb">
+			<div class="blog-preview-box">
+				<img class="blog-preview-image" src="Images/Banners/cheesecake-banner.jpg">
+				<p class="blog-preview-title">Vegan 30-day Challenge</p>
+				<p class="blog-preview-text">I went vegan for a month. Here's what I learned.</p>
+			</div>
+		</a>
+		<a href="top5taiwanfoods.html">
+			<div class="blog-preview-box">
+				<img class="blog-preview-image" src="Images/Banners/buns-banner.jpg">
+				<p class="blog-preview-title">5 Spectacular Things to Eat in Taiwan</p>
+				<p class="blog-preview-text">Find your generic tourist checklist elsewhere. These are my top 5 daily eats!</p>
+			</div>
+		</a>
+		<a href="taroko.html">
+			<div class="blog-preview-box">
+				<img class="blog-preview-image" src="Images/Banners/taroko-banner.jpg">
+				<p class="blog-preview-title">A Day Trip to Taiwan's Taroko Gorge</p>
+				<p class="blog-preview-text">Maybe a bit of a tourist trap. Maybe.</p>
+			</div>
+		</a>
+		<a href="yangmingshan.html">
+			<div class="blog-preview-box">
+				<img class="blog-preview-image" src="Images/Banners/erziping-banner.jpg">
+				<p class="blog-preview-title">Day hike near Taipei: Yangmingshan</p>
+				<p class="blog-preview-text">A detailed walkthrough of the historic butterfly trail leading through the park and to tops of mountains</p>
+			</div>
+		</a>
+	</div>
+
+	<!-- Social media follow buttons -->
+	<div class="smButtonsLoad"></div>
+	<script>
+		$(document).ready(function() {
+			$(".smButtonsLoad").load("sm-buttons.html");
+		});
+	</script>
+</body>
