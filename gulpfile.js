@@ -11,7 +11,7 @@ const uglify 		= require('gulp-uglify')
 const s3 			= require('gulp-s3-upload')(config)
 
 gulp.task("upload", function() {
-    return 	gulp.src("/Client/index.html")
+    return 	gulp.src("./Client/**")
 		    .pipe(s3({
 		        Bucket: process.env.AWS_S3_BUCKET_NAME,
 		        ACL:    'public-read'
