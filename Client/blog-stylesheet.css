@@ -66,12 +66,11 @@ header.blog-body.header {
 	padding-left: 30px;
 }
 
-.blog-body p, .blog-body ol, .blog-body ul, .blog-body li {
+.blog-body p, .blog-body ol, .blog-body ul, .blog-body li, .blog-body aside, .blog-body a {
 	font-size: 18px;
 	padding-left: 14px;
 	padding-right: 14px;
 	padding-top: 12px;
-	display: block;
     line-height: 27px;
     letter-spacing: -.004em;
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
@@ -219,29 +218,30 @@ header.blog-body.header {
 	padding-top: 25px;
 }
 
-@media (min-width: 600px) {
-	.blog-body p, .blog-body h1, .blog-body h2, .blog-body h3, .blog-body h4, .blog-body blockquote, .blog-body ul, .blog-body li, .blog-body ol {
-		width: 700px;
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 0;
-	}
-	.blog-body blockquote {
-		padding-left: 9px;
+@media (max-width: 400px) {
+	.blog-body a {
+		display: block;
 	}
 }
 
-@media (min-width: 700px) {
-	.blog-body img {
+@media (mid-width: 700px) {
+	.blog-body p, .blog-body h1, .blog-body h2, .blog-body h3, .blog-body h4, .blog-body blockquote, .blog-body ul, .blog-body li, .blog-body ol, .blog-body aside, .blog-body a, .blog-body img, .blog-body .imageCaption, .blog-body .inlineBlockImages {
 		width: 700px;
-		display: block;
-		margin-left: auto;
+		display: inline-block;
 		margin-right: auto;
+		padding-left: 0;
 	}
-	.blog-body .inlineBlockImages, .blog-body .imageCaption {
+}
+
+@media (min-width: 750px) {
+
+	.blog-body blockquote {
+		padding-left: 9px;
+	}
+	.blog-body {
+		display: inline-block;
 		width: 700px;
-		display: block;
-		margin-left: auto;
+		margin-left: 50px;
 		margin-right: auto;
 	}
 	.blog-body .inlineImgLeft {
