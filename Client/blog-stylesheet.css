@@ -7,7 +7,7 @@ header.blog-body.header {
 	margin-top: 60px;
 }
 
-.blog-body h3, .blog-body h1, .homepage h3 {
+.blog-body h3, .blog-body h1 {
 	color: rgba(0, 0, 0, 0.8);
 	display: block;
 	font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
@@ -66,7 +66,7 @@ header.blog-body.header {
 	padding-left: 30px;
 }
 
-.blog-body p, .blog-body ol, .blog-body ul, .blog-body li, .blog-body aside, .blog-body a, .homepage p {
+.blog-body p, .blog-body ol, .blog-body ul, .blog-body li, .blog-body aside, .blog-body a {
 	font-size: 18px;
 	padding-left: 14px;
 	padding-right: 14px;
