@@ -4,7 +4,8 @@
 }
 
 header.blog-body.header {
-	margin-top: 60px;
+	padding-top: 60px;
+	display: block;
 }
 
 .blog-body h3, .blog-body h1 {
@@ -224,12 +225,12 @@ header.blog-body.header {
 	}
 }
 
-@media (mid-width: 700px) {
+@media (min-width: 700px) {
 	.blog-body p, .blog-body h1, .blog-body h2, .blog-body h3, .blog-body h4, .blog-body blockquote, .blog-body ul, .blog-body li, .blog-body ol, .blog-body aside, .blog-body a, .blog-body img, .blog-body .imageCaption, .blog-body .inlineBlockImages {
 		width: 700px;
-		display: inline-block;
 		margin-right: auto;
 		padding-left: 0;
+		display: block;
 	}
 }
 
