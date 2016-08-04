@@ -1,0 +1,78 @@
+head
+	//- <!-- Title, and all OG meta tags *** EDITING REQUIRED *** -->
+	title Duck Fried Brown Rice with Black Beans Recipe
+	meta(charset="utf-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1")
+	meta(property="og:url"               	content="http://mspudding.com/blog/duckfriedrice.html")
+	meta(property="og:type"              	content="article")
+	meta(property="og:title"             	content="Duck Fried Rice with Black Beans Recipe")
+	meta(property="og:description"       	content="This duck fried rice is nutty, spicy, and soaked through with the flavor and aroma of Chinese roast duck.")
+	meta(property="fb:app_id"				content="1739146419678054")
+	
+	meta(property="og:image"             	content="http://mspudding.com/Images/Banners/friedrice-banner.jpg")
+	meta(property="og:image:height" 		content="746")
+	meta(property="og:image:width" 			content="1536")
+	
+	meta(property="og:image"             	content="http://mspudding.com/Images/Duckfriedrice/sizzlingduck.jpg")
+	meta(property="og:image:height" 		content="1919")
+	meta(property="og:image:width" 			content="1536")
+
+	//- <!-- Stylesheeeeets! -->
+	link(rel="stylesheet" href="/reset.css")
+	link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css")
+	link(rel="stylesheet" href="/blog-stylesheet.css")
+	link(rel="stylesheet" href="/sm-share-stylesheet.css")
+
+
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+
+	//- <!-- Google Analytics tracking -->
+	script.
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-79084411-1', 'auto');
+		ga('send', 'pageview');
+
+body
+
+	//- <!-- Navbar -->
+	div.navbarLoad
+	script.
+		$(document).ready(function() {
+			$(".navbarLoad").load("/navbar.html");
+		});
+		
+	//- Blog navigation column loader
+	div.blog-columnLoad
+	script.
+		$(document).ready(function() {
+			$(".blog-columnLoad").load("/blog-column.html");
+		});
+
+	//- <!-- Social Media floating share button sidebar *** EDITING REQUIRED ***-->
+	div.sm-sidebarLoad
+	script.
+		$(document).ready(function() {
+			$(".sm-sidebarLoad").load("/sm-share-sidebar.html", function(){;
+				mp_sm_sidebar_init(
+					// Swap in blog link, Default title, and summary here
+					"http://mspudding.com/blog/taroko.html",
+					"Taroko Gorge Travel Guide",
+					"Important things to know if you're planning to visit this tourist destination"
+				)
+			});
+		});
+
+	//- <!-- BLOG CONTENT GOES HERE -->
+	
+	//- <!-- Social media follow buttons -->
+	div.smButtonsLoad
+	script.
+		$(document).ready(function() {
+			$(".smButtonsLoad").load("/sm-buttons.html");
+		});
