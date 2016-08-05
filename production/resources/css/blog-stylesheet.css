@@ -198,10 +198,21 @@ header.blog-body.header {
 	padding-top: 25px;
 }
 
+
 @media (max-width: 400px) {
 	.blog-body a {
 		display: block;
 	}
+	.blog-body img.tiny-portrait {
+		padding-left: 14px;
+	}
+}
+
+.blog-body img.tiny-portrait {
+	width: 150px !important; 
+	border-radius: 4px; 
+	padding-top: 0;
+	margin-left: 0;
 }
 
 @media (min-width: 700px) {
@@ -210,6 +221,7 @@ header.blog-body.header {
 		display: block;
 		margin-right: auto;
 		margin-left: auto;
+		padding-left: 0;
 	}
 }
 
