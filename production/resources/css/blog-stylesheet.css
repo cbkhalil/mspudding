@@ -1,49 +1,43 @@
 @font-face {
     font-family: "cookiesandmilk";
-    src: url('cookiesandmilk.ttf') format('truetype');
+    src: url('/resources/cookiesandmilk.ttf') format('truetype');
 }
 
+/*Padding for title of blog pages, to prevent it from colliding with navbar*/
 header.blog-body.header {
 	padding-top: 60px;
+}
+
+/*text formatting for all website text (blog and otherwise)*/
+.blog-body {
 	display: block;
+	-webkit-font-smoothing: antialiased;
+	word-wrap: break-word;
 }
 
 .blog-body h3, .blog-body h1 {
 	color: rgba(0, 0, 0, 0.8);
-	display: block;
 	font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
 	font-size: 28px;
-	font-style: normal;
 	font-weight: bold;
 	letter-spacing: -0.616px;
 	line-height: 31.36px;
-	margin: 37px 0px 0px 13px;
-	word-wrap: break-word;
-    -webkit-font-smoothing: antialiased;
+	margin: 37px 0 0 13px;
 }
 
 .blog-body h4, .blog-body h2 {
 	color: rgba(0, 0, 0, 0.439216);
-	display: block;
 	font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
 	font-size: 24px;
-	font-style: normal;
 	font-weight: 300;
 	letter-spacing: -0.528px;
 	line-height: 28.32px;
-	margin-bottom: 0px;
-	margin-left: 13px;
-	margin-right: 0px;
-	margin-top: 22px;
-	visibility: visible;
-	word-wrap: break-word;
-	-webkit-font-smoothing: antialiased;
+	margin: 22px 0 0 13px;
 }
 
 .blog-body blockquote {
 	border-left: 3px solid black;
 	color: rgba(0, 0, 0, 0.8);
-	display: block;
 	font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif;
 	font-size: 18px;
 	font-style: italic;
@@ -53,9 +47,6 @@ header.blog-body.header {
 	margin: 21px 0px 0px 0px;
 	padding-bottom: 3px;
 	padding-left: 9px;
-	visibility: visible;
-	word-wrap: break-word;
-	-webkit-font-smoothing: antialiased;
 
 }
 
@@ -63,7 +54,6 @@ header.blog-body.header {
 	font-family: medium-content-slab-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif;
 	font-size: 22px;
 	font-style: italic;
-	word-wrap: break-word;
 	padding-left: 30px;
 }
 
@@ -77,8 +67,6 @@ header.blog-body.header {
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
     font-weight: normal;
     font-style: normal;
-    word-wrap: break-word;
-    -webkit-font-smoothing: antialiased;
 }
 
 .blog-body li {
@@ -93,17 +81,11 @@ header.blog-body.header {
 	width: 100%;
 	font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
 	font-weight: 300;
-    font-style: normal;
     font-size: 14px;
     line-height: 1.4;
     color: rgba(0,0,0,.6);
     letter-spacing: 0;
-    display: block;
 
-}
-
-.blog-body #date {
-	text-align: right;
 }
 
 .blog-body img, .blog-body .header-img {
@@ -129,7 +111,6 @@ header.blog-body.header {
 .blog-body .videoBox {
 	max-width: 540px;
 	overflow: hidden;
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -138,6 +119,7 @@ header.blog-body.header {
 	margin-top: -200px;
 }
 
+/*formatting for recipe cards at the bottom of blog posts*/
 .recipe-card {
 	width: 96%;
 	background-color: #ECE8D0;
@@ -157,7 +139,6 @@ header.blog-body.header {
 	display: block;
 	font-family: "cookiesandmilk", medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
 	word-wrap: break-word;
-    -webkit-font-smoothing: antialiased;
     margin-bottom: 0;
 }
 
@@ -205,8 +186,6 @@ header.blog-body.header {
     padding: 1px 5px;
     line-height: 1.2em;
     margin-left: 10px;
-    word-wrap: break-word;
-    -webkit-font-smoothing: antialiased;
 }
 
 .recipe-card .recipe-directions li {
@@ -219,18 +198,30 @@ header.blog-body.header {
 	padding-top: 25px;
 }
 
+
 @media (max-width: 400px) {
 	.blog-body a {
 		display: block;
 	}
+	.blog-body img.tiny-portrait {
+		padding-left: 14px;
+	}
+}
+
+.blog-body img.tiny-portrait {
+	width: 150px !important; 
+	border-radius: 4px; 
+	padding-top: 0;
+	margin-left: 0;
 }
 
 @media (min-width: 700px) {
 	.blog-body p, .blog-body h1, .blog-body h2, .blog-body h3, .blog-body h4, .blog-body blockquote, .blog-body ul, .blog-body li, .blog-body ol, .blog-body aside, .blog-body a, .blog-body img, .blog-body .imageCaption, .blog-body .inlineBlockImages {
-		width: 700px;
-		margin-right: auto;
-		padding-left: 0;
+		width: 700px !important;
 		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 0;
 	}
 }
 
@@ -255,7 +246,6 @@ header.blog-body.header {
 	}
 	.blog-body .narrowImage {
 		width: 350px;
-		display: block;
 		margin-left: auto;
 		margin-right: auto;
 	}
