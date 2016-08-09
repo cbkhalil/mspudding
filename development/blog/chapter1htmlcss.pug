@@ -9,7 +9,7 @@ head
 	meta(property="og:description"       	content="I felt like a child reading the dictionary long before I had the vocabulary to understand the words in the definitions.")
 	meta(property="fb:app_id"				content="1739146419678054")
 	
-	meta(property="og:image"             	content="http://mspudding.com/resources/images/Banners/htmlcss-banner.jpg")
+	meta(property="og:image"             	content="http://mspudding.com/resources/images/banners/htmlcss-banner.jpg")
 	meta(property="og:image:height" 		content="875")
 	meta(property="og:image:width" 			content="1800")
 
@@ -17,8 +17,8 @@ head
 	link(rel="stylesheet" href="/resources/css/reset.css")
 	link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
 	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css")
+	link(rel="stylesheet" href="/resources/css/stylesheet.css")
 	link(rel="stylesheet" href="/resources/css/blog-stylesheet.css")
-	link(rel="stylesheet" href="/resources/css/sm-share-stylesheet.css")
 
 
 	script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js")
@@ -40,14 +40,14 @@ body
 	div.navbarLoad
 	script.
 		$(document).ready(function() {
-			$(".navbarLoad").load("/navbar.html");
+			$(".navbarLoad").load("/_top-nav.html");
 		});
 		
 	//- Blog navigation column loader
 	div.blog-columnLoad
 	script.
 		$(document).ready(function() {
-			$(".blog-columnLoad").load("/blog-column.html");
+			$(".blog-columnLoad").load("/_blog-column.html");
 		});
 
 	//- <!-- Social Media floating share button sidebar *** EDITING REQUIRED ***-->
@@ -125,7 +125,7 @@ body
 			<strong>This should tickle your brain and frustrate you at times.</strong> My first day trying this, I stubbornly spent 45 minutes figuring out how to make three of the 4 corners of an image rounded while fitting some thin borders against the pointy end. 
 		p I’ll be back soon to help you get set up to work with files locally on your computer :) <br>Many things in the works. Thanks for reading
 			i(class="fa fa-heart-o" style="color: black")
-		img(src="/resources/images/HTMLCSS/puddin.jpg" alt="selfie of mspudding at the san francisco marina" style="width: 150px; border-radius: 4px; padding-top: 0px")
+		img.tiny-portrait(src="/resources/images/HTMLCSS/puddin.jpg" alt="selfie of mspudding at the san francisco marina")
 		p -Puddin'
 
 	//- <!-- Social media follow buttons -->

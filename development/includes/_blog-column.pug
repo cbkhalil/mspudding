@@ -1,0 +1,75 @@
+//- <!-- Blog preview link boxes -->
+-
+  articles = [
+    {
+      title: "A Real Beginner's Guide to HTML and CSS",
+      preview: "Skip the $17,000 bootcamp and join me on a self-taught journey :)",
+      image: "/resources/images/banners/htmlcss-banner.jpg",
+      url: "/blog/chapter1htmlcss.html"
+    },
+    {
+      title: "Massive Super High-Protein Pancakes",
+      preview: "At 40g of protein a serving, I hope you'll be stuffing these in your mouth very soon!",
+      image: "/resources/images/banners/pancakes-banner.jpg",
+      url: "/blog/proteinpancakes.html"
+    },
+    {
+      title: "A Bicycle Day Trip with Pokemon Go",
+      preview: "Here's how I planned an awesome bike day trip and a Pokemon adventure.",
+      image: "/resources/images/banners/pokemon-banner.jpg",
+      url: "/blog/pokemononabike.html"
+    },
+    {
+      title: "Healthified: Duck Fried Rice!",
+      preview: "This duck fried rice is nutty, spicy, and soaked through with the flavor and aroma of Chinese duck.",
+      image: "/resources/images/banners/friedrice-banner.jpg",
+      url: "/blog/duckfriedrice.html"
+    },
+    {
+      title: "I Can't Run a Mile",
+      preview: "Well, I couldn't until yesterday. It took me 27 years to realize I've been running too fast.",
+      image: "/resources/images/banners/mountaintrail-banner.jpg",
+      url: "/blog/cardiomynemesis.html"
+    },
+    {
+      title: "On Weight Loss: Building Healthy Habits",
+      preview: "My thoughts on food, and how I changed my relationship with it to improve my health.",
+      image: "/resources/images/banners/mewithcorn-banner.jpg",
+      url: "/blog/mythoughtsonfood.html"
+    },
+    {
+      title: "Vegan 30-day Challenge",
+      preview: "I went vegan for a month. Here's what I learned.",
+      image: "/resources/images/banners/cheesecake-banner.jpg",
+      url: "https://medium.com/@MsPudding/feb-30-day-challenge-the-vegan-diet-and-how-it-s-changing-me-fd51ea3c988#.xf8xg38fb"
+    },
+    {
+      title: "5 Spectacular Things to Eat in Taiwan",
+      preview: "Find your generic tourist checklist elsewhere. These are my top 5 daily eats!",
+      image: "/resources/images/banners/buns-banner.jpg",
+      url: "/blog/top5taiwanfoods.html"
+    },
+    {
+      title: "A Day Trip to Taiwan's Taroko Gorge",
+      preview: "Maybe a bit of a tourist trap. Maybe.",
+      image: "/resources/images/banners/taroko-banner.jpg",
+      url: "/blog/taroko.html"
+    },
+    {
+      title: "Day hike near Taipei: Yangmingshan",
+      preview: "A detailed walkthrough of the historic butterfly trail leading through the park and to tops of mountains",
+      image: "/resources/images/banners/erziping-banner.jpg",
+      url: "/blog/yangmingshan.html"
+    }
+  ]
+
+
+nav.blog-previews
+  each article in articles
+    ul
+      li.blog-preview-box
+        a(href=article.url)
+          img.blog-preview-image(src=article.image)
+        p.blog-preview-title #{article.title}
+        p.blog-preview-text #{article.preview}
+
