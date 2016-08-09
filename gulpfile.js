@@ -15,16 +15,16 @@ gulp.task('render-blog', function() {
       .pipe(gulp.dest('./production/blog/'))
 })
 
-gulp.task('render-site-components', function() {
-  return  gulp.src('./development/site-components/*.pug')
+gulp.task('render-includes', function() {
+  return  gulp.src('./development/includes/*.pug')
       .pipe(pug({
         doctype: 'html'
       }))
       .pipe(gulp.dest('./production/'))
 })
 
-gulp.task("upload", ['render-blog', 'render-site-components'], function() {
-    return  gulp.src("./production/**")
+gulp.task("upload", ['render-blog', 'render-includes'], function() {
+    return  gulp.src("./production/")
         .pipe(s3({
             Bucket: process.env.AWS_S3_BUCKET_NAME,
             ACL:    'public-read'
