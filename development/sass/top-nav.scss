@@ -1,8 +1,6 @@
-$nav-fonts: "Helvetica Neue",Helvetica,Arial,sans-serif;
-
 .navbar {
   background-color: #2d2d30;
-  font-family: $nav-fonts;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   height: 50px;
   letter-spacing: 2px;
   line-height: 20px;
@@ -12,49 +10,63 @@ $nav-fonts: "Helvetica Neue",Helvetica,Arial,sans-serif;
   top: 0;
   left: 0;
   right: 0;
-}
 
-.navbar-left {
-  font-size: 18px;
-  float: left;
-  color: #d5d5d5;
-}
-
-.navbar-right {
-  float: right;
-  font-size: 14px;
-  color: #d5d5d5;
-}
-
-.navbar ul {
-  padding: 0;
-  margin: 0;
-}
-
-.navbar-text {
-  display: inline-block;
-  text-decoration: none;
-  padding: 15px;
-}
-
-.navbar-right li {
-  list-style-type: none;
-}
-
-.navbar li a:hover {
-  color: #fff;
-}
-
-.navbar-toggle {
-  display: none;
-}
-
-@media (max-width: 700px) {
-  .navbar-toggle {
-    display: block;
-    border-color: transparent;
-  }
-  .navbar-right {
+  button {
     display: none;
+    padding: 3px 7px;
+    margin: 6px 5px;
+    background-color: #2d2d30;
+    border-radius: 4px;
+  }
+
+  button:focus {
+    outline: none;
+    background-color: #ddd;
+  }
+
+  button i {
+    color: #888;
+  }
+
+  ul {
+    padding: 15px;
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    float: right;
+    list-style-type: none;
+  }
+
+  li a, div a {
+    color: #d5d5d5;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 15px;
+  }
+
+  li a:hover, div a:hover {
+    color: #fff;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+    float: left;
+  }
+
+  a:-webkit-any-link {
+    color: #d5d5d5;
+  }
+
+  @media (max-width: 700px) {
+    button {
+      display: block;
+      float: right;
+      border-color: transparent;
+    }
+    ul {
+      display: none;
+    }
   }
 }
