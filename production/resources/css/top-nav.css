@@ -19,6 +19,8 @@
   .navbar button:focus {
     outline: none;
     background-color: #ddd; }
+  .navbar button:hover {
+    background-color: #ddd; }
   .navbar button i {
     color: #888; }
   .navbar ul {
@@ -37,13 +39,39 @@
     color: #fff; }
   .navbar .navbar-brand {
     font-size: 18px;
-    float: left; }
+    float: left;
+    z-index: -1; }
   .navbar a:-webkit-any-link {
     color: #d5d5d5; }
+  .navbar #navbar-dropdown-menu {
+    height: 100px;
+    transition: height 200ms linear;
+    background-color: black; }
   @media (max-width: 700px) {
     .navbar button {
       display: block;
       float: right;
       border-color: transparent; }
     .navbar ul {
-      display: none; } }
+      display: block;
+      height: 0;
+      background-color: #2d2d30;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      padding: 0;
+      border-top: 1px solid #ddd; }
+    .navbar li {
+      display: block;
+      height: 50px;
+      float: none; }
+    .navbar li a {
+      height: 35px;
+      left: 0;
+      right: 0;
+      position: absolute;
+      padding: 15px 0 0 15px; }
+    .navbar .hide {
+      height: 0px !important;
+      overflow: hidden; } }
