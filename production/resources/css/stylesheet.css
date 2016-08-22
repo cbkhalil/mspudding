@@ -21,36 +21,6 @@
   bottom: 0;
 }
 
-/*navbar styling*/
-.navbar, .dropdown ul, .navbar-default .navbar-nav .open a {
-  margin-bottom: 0;
-  background-color: #2d2d30;
-  border: 0;
-  font-size: 14px !important;
-  letter-spacing: 2px;
-  opacity: 0.9;
-}
-
-.navbar li a, .navbar .navbar-brand, .dropdown ul, a.dropdown-toggle {
-  color: #d5d5d5 !important;
-}
-
-/* On hover, the links will turn white */
-.navbar-nav li a:hover, .navbar-brand:hover, .dropdown-menu a:hover, .navbar-nav .open a:hover {
-  color: #fff !important;
-}
-
-/* The active link */
-.navbar-nav li.active a, .navbar-nav .open a {
-  color: #fff !important;
-  background-color:#29292c !important;
-}
-
-/* Remove border color from the collapsible button */
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-}
-
 /* Social media footer buttons*/
 .fa {
   color: white;
