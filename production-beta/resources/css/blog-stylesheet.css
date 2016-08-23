@@ -1,0 +1,266 @@
+@font-face {
+    font-family: "cookiesandmilk";
+    src: url('/resources/cookiesandmilk.ttf') format('truetype');
+}
+
+/*Padding for title of blog pages, to prevent it from colliding with navbar*/
+header.blog-body.header {
+	padding-top: 60px;
+}
+
+/*text formatting for all website text (blog and otherwise)*/
+.blog-body {
+	display: block;
+	-webkit-font-smoothing: antialiased;
+	word-wrap: break-word;
+}
+
+.blog-body h3, .blog-body h1 {
+	color: rgba(0, 0, 0, 0.8);
+	font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: -0.616px;
+	line-height: 31.36px;
+	margin: 37px 0 0 13px;
+}
+
+.blog-body h4, .blog-body h2 {
+	color: rgba(0, 0, 0, 0.439216);
+	font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	letter-spacing: -0.528px;
+	line-height: 28.32px;
+	margin: 22px 0 0 13px;
+}
+
+.blog-body blockquote {
+	border-left: 3px solid black;
+	color: rgba(0, 0, 0, 0.8);
+	font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: normal;
+	letter-spacing: -0.072px;
+	line-height: 27px;
+	margin: 21px 0px 0px 0px;
+	padding-bottom: 3px;
+	padding-left: 9px;
+
+}
+
+.blog-body .centerQuote {
+	font-family: medium-content-slab-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif;
+	font-size: 22px;
+	font-style: italic;
+	padding-left: 30px;
+}
+
+.blog-body p, .blog-body ol, .blog-body ul, .blog-body li, .blog-body aside, .blog-body a {
+	font-size: 18px;
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-top: 12px;
+    line-height: 27px;
+    letter-spacing: -.004em;
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.blog-body li {
+	list-style-type: disc;
+	list-style-position: inside;
+	display: list-item;
+}
+
+.blog-body .imageCaption {
+	padding: 10px 30px 10px 30px;
+	text-align: center;
+	width: 100%;
+	font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+	font-weight: 300;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(0,0,0,.6);
+    letter-spacing: 0;
+
+}
+
+.blog-body img, .blog-body .header-img {
+	width: 100%;
+	padding-top: 10px;
+}
+
+.blog-body .inlineImgLeft {
+	width: 50%;
+	float: left;
+}
+
+.blog-body .inlineImgRight {
+	width: 50%;
+	float: right;
+}
+
+.blog-body video {
+	width: 100%;
+	max-width: 540px;
+}
+
+.blog-body .videoBox {
+	max-width: 540px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.blog-body #erZiPingBus {
+	margin-top: -200px;
+}
+
+/*formatting for recipe cards at the bottom of blog posts*/
+.recipe-card {
+	width: 96%;
+	background-color: #ECE8D0;
+	margin: 50px 10px;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.5);
+}
+
+.recipe-card .recipe-title {
+	text-align: center;
+
+}
+
+.recipe-card .recipe-title h1, .recipe-card .recipe-title h2 {
+	padding: 18px;
+	font-size: 58px;
+	color: black;
+	display: block;
+	font-family: "cookiesandmilk", medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
+	word-wrap: break-word;
+    margin-bottom: 0;
+}
+
+.recipe-card .recipe-title h2 {
+	padding: 0;
+	margin: 0;
+	font-size: 15px;
+	font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
+}
+
+.recipe-card .recipe-ingredients {
+	background-color: white;
+	width:95%;
+	margin: 10px;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.5);
+}
+
+.recipe-card .recipe-directions {
+	background-color: white;
+	width:95%;
+	display: inline-block;
+	margin: 10px;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.5);
+}
+
+.recipe-card .recipe-ingredients h2{
+	width: 225px !important;
+	padding: 0 5px;
+	color: black;
+	display: block;
+	font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
+	font-size: 20px;
+	margin: 2px;
+}
+.recipe-card .recipe-ingredients li, .recipe-card .recipe-ingredients ul, .recipe-card .recipe-directions li {
+	font-size: 16px;
+	letter-spacing: -0.004em;
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    padding: 1px 5px;
+    line-height: 1.2em;
+    margin-left: 10px;
+}
+
+.recipe-card .recipe-directions li {
+	padding: 6px;
+	margin: 0;
+}
+
+.recipe-anchor {
+	visibility: none;
+	padding-top: 25px;
+}
+
+
+@media (max-width: 400px) {
+	.blog-body a {
+		display: block;
+	}
+	.blog-body img.tiny-portrait {
+		padding-left: 14px;
+	}
+}
+
+.blog-body img.tiny-portrait {
+	width: 150px !important; 
+	border-radius: 4px; 
+	padding-top: 0;
+	margin-left: 0;
+}
+
+@media (min-width: 700px) {
+	.blog-body p, .blog-body h1, .blog-body h2, .blog-body h3, .blog-body h4, .blog-body blockquote, .blog-body ul, .blog-body li, .blog-body ol, .blog-body aside, .blog-body a, .blog-body img, .blog-body .imageCaption, .blog-body .inlineBlockImages {
+		width: 700px !important;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 0;
+	}
+}
+
+@media (min-width: 750px) {
+
+	.blog-body blockquote {
+		padding-left: 9px;
+	}
+	.blog-body {
+		display: inline-block;
+		width: 700px;
+		margin-left: 50px;
+		margin-right: auto;
+	}
+	.blog-body .inlineImgLeft {
+		width: 350px;
+		float: left;
+	}
+	.blog-body .inlineImgRight {
+		width: 350px;
+		float: right;
+	}
+	.blog-body .narrowImage {
+		width: 350px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.recipe-card {
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+	}
+	.recipe-card .recipe-ingredients {
+		max-width: 225px;
+		margin: 10px 5px 10px 10px;
+	}
+	.recipe-card .recipe-directions {
+		max-width: 440px;
+		margin: 10px 10px 10px 5px;
+	}
+}

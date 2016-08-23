@@ -31,15 +31,25 @@ gulp.task('render-includes', () => {
     .pipe(gulp.dest('./production/'))
 })
 
+// Render all pug files and watch them for changes
 gulp.task('pug:watch', ['render-blog', 'render-includes'], () => {
   gulp.watch(['./development/blog/*.pug', './development/includes/*.pug'], ['render-blog', 'render-includes']);
 });
 
+// production beta sass/jade
+gulp.task('website-sass', () => {
+  return gulp.src('./development/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./production-beta/resources/css/'));
+});
 
-
-
-
-
+gulp.task('website', ['website-sass'], () => {
+  return  gulp.src('./development/**/*.pug')
+    .pipe(pug({
+      doctype: 'html'
+    }))
+    .pipe(gulp.dest('./production-beta/'))
+})
 
 gulp.task('sass', () => {
   return gulp.src('./development/sass/**/*.scss')
@@ -47,13 +57,10 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./production/resources/css/'));
 });
 
+// Render all sass files and watch them for changes
 gulp.task('sass:watch', ['sass'], () => {
   gulp.watch('./development/sass/**/*.scss', ['sass']);
 });
-
-
-
-
 
 gulp.task('serve', () => {
     browserSync.init({
@@ -63,10 +70,6 @@ gulp.task('serve', () => {
         open: false
     });
 });
-
-
-
-
 
 gulp.task("upload", ['render-blog', 'render-includes', 'sass'], () => {
   return  gulp.src("./production/")
