@@ -2,29 +2,14 @@ html
   head
     meta(charset="utf-8")
     meta(http-equiv="x-ua-compatible" content="ie=edge")
-    meta(name="description" content="")
-    title Duck Fried Brown Rice with Black Beans Recipe
-    meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(property="og:url"                  content="http://mspudding.com/blog/duckfriedrice.html")
-    meta(property="og:type"                 content="article")
-    meta(property="og:title"                content="Duck Fried Rice with Black Beans Recipe")
-    meta(property="og:description"          content="This duck fried rice is nutty, spicy, and soaked through with the flavor and aroma of Chinese roast duck.")
-    meta(property="fb:app_id"               content="1739146419678054")
-    
-    meta(property="og:image"                content="http://mspudding.com/resources/images/banners/friedrice-banner.jpg")
-    meta(property="og:image:height"         content="746")
-    meta(property="og:image:width"          content="1536")
-    
-    meta(property="og:image"                content="http://mspudding.com/resources/images/duckfriedrice/sizzlingduck.jpg")
-    meta(property="og:image:height"         content="1919")
-    meta(property="og:image:width"          content="1536")
+    block metadata
 
     //- Stylesheeeeets!
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css")
-    link(rel="stylesheet" href="/resources/css/blog-stylesheet.css")
-    link(rel="stylesheet" href="/resources/css/stylesheet.css")
     link(rel="stylesheet" href="/resources/css/site.css")
+    link(rel="stylesheet" href="/resources/css/stylesheet.css")
+    link(rel="stylesheet" href="/resources/css/blog-stylesheet.css")
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js")
 
@@ -43,8 +28,9 @@ body
   include ../includes/_blog-column.pug
 
     //- Page content here!
-  block content
   block sidebar
+  block content
+  block recipe
 
   include ../includes/_footer.pug
 
