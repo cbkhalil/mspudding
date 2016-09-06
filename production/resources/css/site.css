@@ -121,3 +121,8 @@ html {
     .navbar .hide {
       height: 0px !important;
       overflow: hidden; } }
+
+.hero-feature {
+  font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif; }
+  .hero-feature img {
+    width: 100%; }

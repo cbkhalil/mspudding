@@ -1,11 +1,17 @@
 extends ../layouts/blog-layout.pug
 
+
+block variables
+  - var url = "http://mspudding.com/mythoughtsonfood.html"
+  - var title = "How I Lost 20 Pounds Without Dieting"
+  - var description = "My thoughts on food, and how I changed my relationship with it to improve my health."
+
 block metadata
   title My Thoughts on Food: Building Healthy Habits
-  meta(property="og:url"                content="http://mspudding.com/mythoughtsonfood.html")
+  meta(property="og:url"                content=url)
   meta(property="og:type"               content="article")
-  meta(property="og:title"              content="On Weight Loss: Building Healthy Habits")
-  meta(property="og:description"        content="My thoughts on food, and how I changed my relationship with it to improve my health.")
+  meta(property="og:title"              content=title)
+  meta(property="og:description"        content=description)
   meta(property="fb:app_id"             content="1739146419678054")
   
   meta(property="og:image"              content="http://mspudding.com/resources/images/banners/mewithcorn-banner.jpg")
@@ -16,19 +22,6 @@ block metadata
   meta(property="og:image:height"       content="640")
   meta(property="og:image:width"        content="640")
 
-block sidebar
-  div.sm-sidebarLoad
-  script.
-    $(document).ready(function() {
-      $(".sm-sidebarLoad").load("/sm-share-sidebar.html", function(){
-        mp_sm_sidebar_init(
-          // Swap in blog link, Default title, and summary here
-          "http://mspudding.com/mythoughtsonfood.html",
-          "How I Lost 20 Pounds Without Dieting",
-          "My thoughts on food, and how I changed my relationship with it to improve my health."
-        )
-      });
-    });
 
 block content
   header.blog-body.header

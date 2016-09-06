@@ -1,13 +1,13 @@
 // Find and set page url, title, and summary
-window.mp_sm_sidebar_init = function(page_url, page_title, page_summary) {
-	if (page_url) {
-		page_url 	= encodeURIComponent(page_url);
+window.mp_sm_sidebar_init = function(url, title, description) {
+	if (url) {
+		url 	= encodeURIComponent(url);
 	}
-	if (page_title) {
-		page_title 	= encodeURIComponent(page_title);
+	if (title) {
+		title 	= encodeURIComponent(title);
 	}
-	if (page_summary) {
-		page_summary = encodeURIComponent(page_summary);
+	if (description) {
+		description = encodeURIComponent(description);
 	}
 
 	// plug page url, title, and summary into share links for social media
@@ -16,9 +16,9 @@ window.mp_sm_sidebar_init = function(page_url, page_title, page_summary) {
 
 		if(!href) return
 
-		href = href.replace("$PAGE_URL", page_url || '')
-				   .replace("$PAGE_TITLE", page_title || '')
-				   .replace("$PAGE_SUMMARY", page_summary || '');
+		href = href.replace("#{url}", url || '')
+				   .replace("#{title}", title || '')
+				   .replace("#{description}", description || '');
 		$(elem).attr('href', href);
 	})
 
@@ -29,7 +29,7 @@ window.mp_sm_sidebar_init = function(page_url, page_title, page_summary) {
 				hitType: 'event',
 				eventCategory: 'Social Media Shares',
 				eventAction: platform,
-				eventLabel: page_title
+				eventLabel: title
 			});
 		}
 	}

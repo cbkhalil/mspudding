@@ -15,46 +15,37 @@ const browserSync   = require('browser-sync').create();
 
 
 
-gulp.task('render-blog', () => {
-  return  gulp.src('./development/blog/*.pug')
-    .pipe(pug({
-      doctype: 'html'
-    }))
-    .pipe(gulp.dest('./production/blog/'))
-})
 
-gulp.task('render-includes', () => {
-  return  gulp.src('./development/includes/*.pug')
-    .pipe(pug({
-      doctype: 'html'
-    }))
-    .pipe(gulp.dest('./production/'))
-})
-
-// Render all pug files and watch them for changes
-gulp.task('pug:watch', ['render-blog', 'render-includes'], () => {
-  gulp.watch(['./development/blog/*.pug', './development/includes/*.pug'], ['render-blog', 'render-includes']);
-});
-
-// production beta sass/jade
-gulp.task('website-sass', () => {
-  return gulp.src('./development/sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./production-beta/resources/css/'));
-});
-
-gulp.task('website', ['website-sass'], () => {
-  return  gulp.src('./development/**/*.pug')
+gulp.task('main-pug', () => {
+  return  gulp.src('./development/*.pug')
     .pipe(pug({
       doctype: 'html'
     }))
     .pipe(gulp.dest('./production-beta/'))
 })
 
+gulp.task('blog-pug', () => {
+  return  gulp.src('./development/blog/*.pug')
+    .pipe(pug({
+      doctype: 'html'
+    }))
+    .pipe(gulp.dest('./production-beta/blog/'))
+})
+
+
+// Render all pug files and watch them for changes
+gulp.task('pug:watch', ['main-pug', 'blog-pug'], () => {
+  gulp.watch(['./development/blog/*.pug', './development/includes/*.pug'], ['render-blog', 'render-includes']);
+});
+
+
+
+
+
 gulp.task('sass', () => {
   return gulp.src('./development/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./production/resources/css/'));
+    .pipe(gulp.dest('./production-beta/resources/css/'));
 });
 
 // Render all sass files and watch them for changes
@@ -62,16 +53,22 @@ gulp.task('sass:watch', ['sass'], () => {
   gulp.watch('./development/sass/**/*.scss', ['sass']);
 });
 
+
+
+
 gulp.task('serve', () => {
     browserSync.init({
         server: {
-            baseDir: "./production"
+            baseDir: "./production-beta"
         },
         open: false
     });
 });
 
-gulp.task("upload", ['render-blog', 'render-includes', 'sass'], () => {
+
+
+
+gulp.task("upload", ['main-pug', 'blog-pug', 'sass'], () => {
   return  gulp.src("./production/")
     .pipe(s3({
       Bucket: process.env.AWS_S3_BUCKET_NAME,
