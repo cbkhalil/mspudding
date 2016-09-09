@@ -21,7 +21,7 @@ gulp.task('main-pug', () => {
     .pipe(pug({
       doctype: 'html'
     }))
-    .pipe(gulp.dest('./production-beta/'))
+    .pipe(gulp.dest('./production/'))
 })
 
 gulp.task('blog-pug', () => {
@@ -29,7 +29,7 @@ gulp.task('blog-pug', () => {
     .pipe(pug({
       doctype: 'html'
     }))
-    .pipe(gulp.dest('./production-beta/blog/'))
+    .pipe(gulp.dest('./production/blog/'))
 })
 
 
@@ -45,7 +45,7 @@ gulp.task('pug:watch', ['main-pug', 'blog-pug'], () => {
 gulp.task('sass', () => {
   return gulp.src('./development/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./production-beta/resources/css/'));
+    .pipe(gulp.dest('./production/resources/css/'));
 });
 
 // Render all sass files and watch them for changes
@@ -59,7 +59,7 @@ gulp.task('sass:watch', ['sass'], () => {
 gulp.task('serve', () => {
     browserSync.init({
         server: {
-            baseDir: "./production-beta"
+            baseDir: "./production"
         },
         open: false
     });
