@@ -1,0 +1,34 @@
+.blog-preview-list {
+  span {
+    height: 128px;
+    width: 128px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 32px;
+    display: inline-block;
+  }
+
+  a {
+    width: 800px;
+    height: 200px;
+  }
+
+  img {
+    height: 128px;
+  }
+  .title {
+    font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
+    font-size: 28px;
+    color: #607D8B;
+    margin: 32px;
+  }
+  p {
+    font-family: NotoSerif, serif;
+    font-size: 18px;
+    color: #607D8B;
+    line-height: 32px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 32px;
+  }
+}

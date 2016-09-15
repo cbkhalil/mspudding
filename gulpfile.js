@@ -35,7 +35,7 @@ gulp.task('blog-pug', () => {
 
 // Render all pug files and watch them for changes
 gulp.task('pug:watch', ['main-pug', 'blog-pug'], () => {
-  gulp.watch(['./development/blog/*.pug', './development/includes/*.pug'], ['render-blog', 'render-includes']);
+  gulp.watch(['./development/blog/*.pug', './development/includes/*.pug'], ['blog-pug', 'main-pug']);
 });
 
 
@@ -69,7 +69,7 @@ gulp.task('serve', () => {
 
 
 gulp.task("upload", ['main-pug', 'blog-pug', 'sass'], () => {
-  return  gulp.src("./production/")
+  return  gulp.src("./production/**/*")
     .pipe(s3({
       Bucket: process.env.AWS_S3_BUCKET_NAME,
       ACL:    'public-read'
