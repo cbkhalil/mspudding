@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Noto+Serif|Source+Sans+Pro';
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,79 +46,189 @@ html {
   box-sizing: inherit; }
 
 .navbar {
-  background-color: #2d2d30;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  height: 50px;
-  letter-spacing: 2px;
-  line-height: 20px;
-  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.85);
+  font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
+  height: 56px;
   text-transform: uppercase;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  z-index: 9999; }
   .navbar button {
     display: none;
-    padding: 0 7px;
-    margin: 6px 5px;
-    background-color: #2d2d30;
+    padding: 0 8px;
+    margin: 20px 24px;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 4px; }
     .navbar button:focus {
       outline: none;
-      background-color: #ddd; }
+      background-color: #CFD8DC; }
     .navbar button:hover {
-      background-color: #ddd; }
+      background-color: #CFD8DC; }
     .navbar button i {
-      color: #888; }
+      color: #00ACC1; }
+    .navbar button i:hover {
+      color: #00E5FF; }
   .navbar ul {
-    padding: 15px;
+    padding: 0 15px;
     margin: 0; }
   .navbar li {
     display: inline-block;
     float: right;
     list-style-type: none; }
   .navbar li a, .navbar h1 a {
-    color: #d5d5d5;
-    font-size: 14px;
+    color: #00ACC1;
+    font-size: 16px;
+    line-height: 56px;
     text-decoration: none;
-    padding: 15px; }
+    padding: 0 15px; }
   .navbar li a:hover, .navbar h1 a:hover {
-    color: #fff; }
+    color: #00E5FF; }
   .navbar h1 a {
-    font-size: 18px;
+    font-size: 20px;
     float: left;
-    z-index: -1; }
+    z-index: -1;
+    padding: 0 32px; }
   .navbar a:visited {
-    color: #d5d5d5; }
-  @media (max-width: 700px) {
-    .navbar #navbar-dropdown-menu {
-      height: 100px;
-      transition: height 200ms linear;
-      background-color: #2d2d30; }
-    .navbar button {
-      display: block;
-      float: right;
-      border-color: transparent; }
-    .navbar ul {
-      display: block;
-      height: 0;
-      background-color: #2d2d30;
+    color: #00ACC1; }
+
+@media (max-width: 700px) {
+  .navbar #navbar-dropdown-menu {
+    height: 168px;
+    transition: height 200ms linear;
+    background-color: rgba(255, 255, 255, 0.9); }
+  .navbar button {
+    display: block;
+    float: right;
+    border-color: transparent;
+    margin: 10px 16px; }
+  .navbar ul {
+    display: block;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    padding: 0;
+    border-top: 1px solid #ddd; }
+  .navbar li {
+    display: block;
+    height: 56px;
+    float: none; }
+  .navbar li a {
+    height: 35px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    padding: 0 0 0 32px;
+    line-height: 40px; }
+  .navbar h1 a {
+    line-height: 56px;
+    padding: 0 16px; }
+  .navbar .hide {
+    height: 0px !important;
+    overflow: hidden; } }
+
+.hero-feature {
+  font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
+  color: white;
+  position: relative;
+  box-sizing: border-box; }
+  .hero-feature div {
+    position: absolute;
+    top: 68px;
+    width: 100%;
+    text-align: center; }
+  .hero-feature img {
+    width: 100%; }
+  .hero-feature h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    margin-top: 32px; }
+  .hero-feature a, .hero-feature a:visited {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    margin: 32px auto;
+    /* Button Border */
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 4px;
+    width: 160px; }
+  .hero-feature a:hover {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+    color: #00ACC1; }
+  @media (min-width: 800px) {
+    .hero-feature a, .hero-feature a:visited {
+      font-size: 20px;
+      line-height: 32px;
+      width: 240px; } }
+  @media (min-width: 1000px) {
+    .hero-feature div {
+      top: 120px; }
+    .hero-feature h1 {
+      font-size: 54px; }
+    .hero-feature a, .hero-feature a:visited {
+      margin: 64px auto 32px auto; } }
+  @media (min-width: 1400px) {
+    .hero-feature a, .hero-feature a:visited {
+      margin: 160px auto 32px auto; } }
+
+.blog-preview-list {
+  padding-right: 300px;
+  position: relative; }
+  .blog-preview-list .sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    background-color: lightblue;
+    height: 800px; }
+  .blog-preview-list ul {
+    width: 100%;
+    padding-top: 16px; }
+  .blog-preview-list li {
+    width: 100%;
+    padding: 0 16px; }
+  .blog-preview-list a {
+    display: block;
+    width: 100%;
+    min-height: 192px;
+    padding-left: 192px;
+    position: relative;
+    border: 2px solid transparent;
+    transition: box-shadow 0.25s, border 0.25s, border-radius 0.25s;
+    /* Box for masking image preview */ }
+    .blog-preview-list a div {
       position: absolute;
-      top: 50px;
-      left: 0;
-      right: 0;
-      padding: 0;
-      border-top: 1px solid #ddd; }
-    .navbar li {
-      display: block;
-      height: 50px;
-      float: none; }
-    .navbar li a {
-      height: 35px;
-      left: 0;
-      right: 0;
-      position: absolute;
-      padding: 15px 0 0 15px; }
-    .navbar .hide {
-      height: 0px !important;
-      overflow: hidden; } }
+      left: 32px;
+      top: 32px;
+      height: 128px;
+      width: 128px;
+      border-radius: 6px;
+      overflow: hidden; }
+  .blog-preview-list a:hover {
+    /* Glowing border + shadow */
+    border: 2px solid #00ACC1;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.24);
+    border-radius: 4px; }
+  .blog-preview-list img {
+    height: 128px; }
+  .blog-preview-list .title {
+    font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
+    font-size: 22px;
+    margin-top: 24px;
+    font-weight: bold; }
+  .blog-preview-list p {
+    font-family: NotoSerif, serif;
+    font-size: 16px;
+    color: #607D8B;
+    line-height: 32px;
+    display: inline-block;
+    padding: 8px 16px 0 0; }

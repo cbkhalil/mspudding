@@ -1,39 +1,41 @@
 .navbar {
-  background-color: #2d2d30;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  height: 50px;
-  letter-spacing: 2px;
-  line-height: 20px;
-  opacity: 0.9;
+  background: rgba(255,255,255,0.85);
+  font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
+  height: 56px;
   text-transform: uppercase;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 9999;
 
   button {
     display: none;
-    padding: 0 7px;
-    margin: 6px 5px;
-    background-color: #2d2d30;
+    padding: 0 8px;
+    margin: 20px 24px;
+    background-color: rgba(255,255,255,0);
     border-radius: 4px;
     
     &:focus {
       outline: none;
-      background-color: #ddd;
+      background-color: #CFD8DC;
     }
 
     &:hover {
-      background-color: #ddd;
+      background-color: #CFD8DC;
     }
 
     i {
-      color: #888;
+      color: #00ACC1;
+    }
+
+    i:hover {
+      color: #00E5FF;
     }
   }
 
   ul {
-    padding: 15px;
+    padding: 0 15px;
     margin: 0;
   }
 
@@ -44,45 +46,51 @@
   }
 
   li a, h1 a {
-    color: #d5d5d5;
-    font-size: 14px;
+    color: #00ACC1;
+    font-size: 16px;
+    line-height: 56px;
     text-decoration: none;
-    padding: 15px;
+    padding: 0 15px;
   }
 
   li a:hover, h1 a:hover {
-    color: #fff;
+    color: #00E5FF;
   }
 
   h1 a {
-    font-size: 18px;
+    font-size: 20px;
     float: left;
     z-index: -1;
+    padding: 0 32px;
   }
 
   a:visited {
-    color: #d5d5d5;
+    color: #00ACC1;
   }
 
-  @media (max-width: 700px) {
+}
+
+@media (max-width: 700px) {
+  .navbar {    
     #navbar-dropdown-menu {
-      height: 100px;
+      height: 168px;
       transition: height 200ms linear;
-      background-color: #2d2d30;
+      background-color: rgba(255,255,255,0.90);
     }
 
     button {
       display: block;
       float: right;
       border-color: transparent;
+      margin: 10px 16px;
     }
 
     ul {
       display: block;
       height: 0;
-      background-color: #2d2d30;
+      background-color: rgba(255,255,255,0.90);
       position: absolute;
-      top: 50px;
+      top: 56px;
       left: 0;
       right: 0;
       padding: 0;
@@ -91,7 +99,7 @@
 
     li {
       display: block;
-      height: 50px;
+      height: 56px;
       float: none;
     }
 
@@ -100,7 +108,13 @@
       left: 0;
       right: 0;
       position: absolute;
-      padding: 15px 0 0 15px;
+      padding: 0 0 0 32px;
+      line-height: 40px;
+    }
+
+    h1 a {
+      line-height: 56px;
+      padding: 0 16px;
     }
 
     .hide {
@@ -108,4 +122,5 @@
       overflow: hidden;
     }
   }
+
 }
