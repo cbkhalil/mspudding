@@ -48,7 +48,7 @@ html {
 .navbar {
   background: rgba(255, 255, 255, 0.85);
   font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
-  height: 80px;
+  height: 56px;
   text-transform: uppercase;
   position: fixed;
   top: 0;
@@ -79,33 +79,23 @@ html {
     list-style-type: none; }
   .navbar li a, .navbar h1 a {
     color: #00ACC1;
-    font-size: 20px;
-    line-height: 80px;
+    font-size: 16px;
+    line-height: 56px;
     text-decoration: none;
     padding: 0 15px; }
   .navbar li a:hover, .navbar h1 a:hover {
     color: #00E5FF; }
   .navbar h1 a {
-    font-size: 28px;
+    font-size: 20px;
     float: left;
     z-index: -1;
     padding: 0 32px; }
   .navbar a:visited {
     color: #00ACC1; }
 
-@media (max-width: 1000px) {
-  .navbar {
-    height: 56px; }
-    .navbar li a {
-      font-size: 16px;
-      line-height: 56px; }
-    .navbar h1 a {
-      font-size: 20px;
-      line-height: 56px; } }
-
 @media (max-width: 700px) {
   .navbar #navbar-dropdown-menu {
-    height: 180px;
+    height: 168px;
     transition: height 200ms linear;
     background-color: rgba(255, 255, 255, 0.9); }
   .navbar button {
@@ -136,7 +126,6 @@ html {
     line-height: 40px; }
   .navbar h1 a {
     line-height: 56px;
-    font-size: 24px;
     padding: 0 16px; }
   .navbar .hide {
     height: 0px !important;
@@ -162,7 +151,7 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
     color: white;
-    padding: 15px;
+    padding: 10px;
     font-size: 16px;
     display: block;
     margin: 32px auto;
@@ -177,46 +166,69 @@ html {
     color: #00ACC1; }
   @media (min-width: 800px) {
     .hero-feature a, .hero-feature a:visited {
-      font-size: 24px;
+      font-size: 20px;
       line-height: 32px;
       width: 240px; } }
   @media (min-width: 1000px) {
     .hero-feature div {
       top: 120px; }
     .hero-feature h1 {
-      font-size: 56px; }
+      font-size: 54px; }
     .hero-feature a, .hero-feature a:visited {
       margin: 64px auto 32px auto; } }
   @media (min-width: 1400px) {
     .hero-feature a, .hero-feature a:visited {
       margin: 160px auto 32px auto; } }
 
-.blog-preview-list span {
-  height: 128px;
-  width: 128px;
-  border-radius: 6px;
-  overflow: hidden;
-  margin: 32px;
-  display: inline-block; }
-
-.blog-preview-list a {
-  width: 800px;
-  height: 200px; }
-
-.blog-preview-list img {
-  height: 128px; }
-
-.blog-preview-list .title {
-  font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
-  font-size: 28px;
-  color: #607D8B;
-  margin: 32px; }
-
-.blog-preview-list p {
-  font-family: NotoSerif, serif;
-  font-size: 18px;
-  color: #607D8B;
-  line-height: 32px;
-  display: inline-block;
-  vertical-align: top;
-  margin: 32px; }
+.blog-preview-list {
+  padding-right: 300px;
+  position: relative; }
+  .blog-preview-list .sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    background-color: lightblue;
+    height: 800px; }
+  .blog-preview-list ul {
+    width: 100%;
+    padding-top: 16px; }
+  .blog-preview-list li {
+    width: 100%;
+    padding: 0 16px; }
+  .blog-preview-list a {
+    display: block;
+    width: 100%;
+    min-height: 192px;
+    padding-left: 192px;
+    position: relative;
+    border: 2px solid transparent;
+    transition: box-shadow 0.25s, border 0.25s, border-radius 0.25s;
+    /* Box for masking image preview */ }
+    .blog-preview-list a div {
+      position: absolute;
+      left: 32px;
+      top: 32px;
+      height: 128px;
+      width: 128px;
+      border-radius: 6px;
+      overflow: hidden; }
+  .blog-preview-list a:hover {
+    /* Glowing border + shadow */
+    border: 2px solid #00ACC1;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.24);
+    border-radius: 4px; }
+  .blog-preview-list img {
+    height: 128px; }
+  .blog-preview-list .title {
+    font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
+    font-size: 22px;
+    margin-top: 24px;
+    font-weight: bold; }
+  .blog-preview-list p {
+    font-family: NotoSerif, serif;
+    font-size: 16px;
+    color: #607D8B;
+    line-height: 32px;
+    display: inline-block;
+    padding: 8px 16px 0 0; }

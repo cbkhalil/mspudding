@@ -1,16 +1,52 @@
 .blog-preview-list {
-  span {
-    height: 128px;
-    width: 128px;
-    border-radius: 6px;
-    overflow: hidden;
-    margin: 32px;
-    display: inline-block;
+  padding-right: 300px;
+  position:relative;
+
+  // Placeholder sidebar for spacing (subscribe, categories)
+  .sidebar{
+    position:absolute;
+    right:0;
+    top:0;
+    width:300px;
+    background-color:lightblue;
+    height:800px;
+  }
+  
+  ul {
+    width:100%;
+    padding-top: 16px;
   }
 
+  li {
+    width:100%;
+    padding: 0 16px;
+  }
   a {
-    width: 800px;
-    height: 200px;
+    display: block;
+    width: 100%;
+    min-height: 192px;
+    padding-left: 192px;
+    position:relative;
+    border: 2px solid rgba(0,0,0,0);
+    transition: box-shadow 0.25s, border 0.25s, border-radius 0.25s;
+
+    /* Box for masking image preview */
+    div {
+      position: absolute;
+      left: 32px;
+      top: 32px;
+      height: 128px;
+      width: 128px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+  }
+
+  a:hover {
+    /* Glowing border + shadow */
+    border: 2px solid #00ACC1;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12), 0px 8px 8px 0px rgba(0,0,0,0.24);
+    border-radius: 4px;
   }
 
   img {
@@ -18,17 +54,17 @@
   }
   .title {
     font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
-    font-size: 28px;
-    color: #607D8B;
-    margin: 32px;
+    font-size: 22px;
+    margin-top: 24px;
+    font-weight: bold;
   }
   p {
     font-family: NotoSerif, serif;
-    font-size: 18px;
+    font-size: 16px;
     color: #607D8B;
     line-height: 32px;
     display: inline-block;
-    vertical-align: top;
-    margin: 32px;
+    padding: 8px 16px 0 0;
   }
+
 }

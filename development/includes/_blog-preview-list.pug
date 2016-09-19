@@ -64,11 +64,12 @@
 
 
 nav.blog-preview-list
-  each article in articles
-    ul
+  ul
+    each article in articles
       li
         a(href=article.url)
-          span
+          div
             img(src=article.image)
           p.title #{article.title}
           p #{article.preview}
+  div.sidebar
