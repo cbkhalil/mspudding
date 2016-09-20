@@ -213,8 +213,10 @@ html {
   /* Box for masking image preview */ }
   @media (max-width: 572px) {
     .hover-card {
-      padding: 0 0 0 192px;
-      min-width: inherit; } }
+      padding: 0 0 0 128px;
+      min-width: inherit;
+      min-height: 128px;
+      margin-bottom: 16px; } }
   .hover-card figure {
     position: absolute;
     left: 32px;
@@ -223,13 +225,22 @@ html {
     width: 128px;
     border-radius: 6px;
     overflow: hidden; }
+    @media (max-width: 572px) {
+      .hover-card figure {
+        top: 16px;
+        left: 16px;
+        height: 96px;
+        width: 96px; } }
+    .hover-card figure img {
+      height: 128px; }
+      @media (max-width: 572px) {
+        .hover-card figure img {
+          height: 96px; } }
   .hover-card:hover {
     /* Glowing border + shadow */
     border: 2px solid #00ACC1;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.24);
     border-radius: 4px; }
-  .hover-card img {
-    height: 128px; }
   .hover-card p,
   .hover-card h3 {
     font-size: 16px;
@@ -242,7 +253,7 @@ html {
     @media (max-width: 572px) {
       .hover-card p {
         font-size: 14px;
-        line-height: 28px; } }
+        line-height: 24px; } }
   .hover-card h3 {
     font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
     font-size: 22px;
@@ -250,4 +261,6 @@ html {
     font-weight: bold; }
     @media (max-width: 572px) {
       .hover-card h3 {
-        font-size: 18px; } }
+        font-size: 18px;
+        margin-top: 0;
+        line-height: 24px; } }
