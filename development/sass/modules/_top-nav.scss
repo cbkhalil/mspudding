@@ -1,7 +1,7 @@
 .navbar {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.8);
   font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
-  height: 56px;
+  height: 64px;
   text-transform: uppercase;
   position: fixed;
   top: 0;
@@ -9,12 +9,40 @@
   right: 0;
   z-index: 9999;
 
+  @media (max-width: 1000px) {
+    height: 56px;
+  }
+
+  @media (max-width: 700px) {
+    height: 48px;
+
+    #navbar-dropdown-menu {
+      height: 144px;
+      transition: height 0.2s linear;
+      background-color: rgba(255,255,255,0.90);
+    }
+
+    .hide {
+      height: 0px !important;
+      overflow: hidden;
+    }
+  }
+
+
   button {
     display: none;
     padding: 0 8px;
     margin: 20px 24px;
     background-color: rgba(255,255,255,0);
     border-radius: 4px;
+    transition: background-color 0.25s;
+
+    @media (max-width: 700px) {
+      display: block;
+      float: right;
+      border-color: transparent;
+      margin: 5px;
+    }
     
     &:focus {
       outline: none;
@@ -27,83 +55,63 @@
 
     i {
       color: #00ACC1;
-    }
+      transition: color 0.25s;
 
-    i:hover {
-      color: #00E5FF;
+      &:hover {
+        color: #00E5FF;
+      }
     }
   }
+
 
   ul {
     padding: 0 15px;
     margin: 0;
-  }
 
-  li {
-    display: inline-block;
-    float: right;
-    list-style-type: none;
-  }
-
-  li a, h1 a {
-    color: #00ACC1;
-    font-size: 16px;
-    line-height: 56px;
-    text-decoration: none;
-    padding: 0 15px;
-  }
-
-  li a:hover, h1 a:hover {
-    color: #00E5FF;
-  }
-
-  h1 a {
-    font-size: 20px;
-    float: left;
-    z-index: -1;
-    padding: 0 32px;
-  }
-
-  a:visited {
-    color: #00ACC1;
-  }
-
-}
-
-@media (max-width: 700px) {
-  .navbar {    
-    #navbar-dropdown-menu {
-      height: 168px;
-      transition: height 200ms linear;
-      background-color: rgba(255,255,255,0.90);
-    }
-
-    button {
-      display: block;
-      float: right;
-      border-color: transparent;
-      margin: 10px 16px;
-    }
-
-    ul {
+    @media (max-width: 700px) {
       display: block;
       height: 0;
       background-color: rgba(255,255,255,0.90);
       position: absolute;
-      top: 56px;
+      top: 48px;
       left: 0;
       right: 0;
       padding: 0;
       border-top: 1px solid #ddd;
     }
+  }
 
-    li {
+
+  li {
+    display: inline-block;
+    float: right;
+    list-style-type: none;
+
+    @media (max-width: 700px) {
       display: block;
-      height: 56px;
+      height: 48px;
       float: none;
     }
+  }
 
-    li a {
+
+  li a, 
+  h1 a {
+    color: #00ACC1;
+    font-size: 16px;
+    line-height: 64px;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.25s;
+
+    @media (max-width: 1000px) {
+      line-height: 56px;
+    }
+  }
+
+
+  li a {
+    @media (max-width: 700px) {
       height: 35px;
       left: 0;
       right: 0;
@@ -112,15 +120,31 @@
       line-height: 40px;
     }
 
-    h1 a {
-      line-height: 56px;
-      padding: 0 16px;
-    }
-
-    .hide {
-      height: 0px !important;
-      overflow: hidden;
+    &:hover {
+      color: #00E5FF;
     }
   }
 
+
+  h1 a {
+    font-size: 20px;
+    float: left;
+    z-index: -1;
+    padding: 0 32px;
+
+    &:hover {
+      color: #00E5FF;
+    }
+
+    @media (max-width: 700px) {
+      line-height: 48px;
+      padding: 0 16px;
+    }
+  }
+
+
+  a:visited {
+    color: #00ACC1;
+  }
 }
+

@@ -46,90 +46,109 @@ html {
   box-sizing: inherit; }
 
 .navbar {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.8);
   font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
-  height: 56px;
+  height: 64px;
   text-transform: uppercase;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999; }
+  @media (max-width: 1000px) {
+    .navbar {
+      height: 56px; } }
+  @media (max-width: 700px) {
+    .navbar {
+      height: 48px; }
+      .navbar #navbar-dropdown-menu {
+        height: 144px;
+        transition: height 0.2s linear;
+        background-color: rgba(255, 255, 255, 0.9); }
+      .navbar .hide {
+        height: 0px !important;
+        overflow: hidden; } }
   .navbar button {
     display: none;
     padding: 0 8px;
     margin: 20px 24px;
     background-color: rgba(255, 255, 255, 0);
-    border-radius: 4px; }
+    border-radius: 4px;
+    transition: background-color 0.25s; }
+    @media (max-width: 700px) {
+      .navbar button {
+        display: block;
+        float: right;
+        border-color: transparent;
+        margin: 5px; } }
     .navbar button:focus {
       outline: none;
       background-color: #CFD8DC; }
     .navbar button:hover {
       background-color: #CFD8DC; }
     .navbar button i {
-      color: #00ACC1; }
-    .navbar button i:hover {
-      color: #00E5FF; }
+      color: #00ACC1;
+      transition: color 0.25s; }
+      .navbar button i:hover {
+        color: #00E5FF; }
   .navbar ul {
     padding: 0 15px;
     margin: 0; }
+    @media (max-width: 700px) {
+      .navbar ul {
+        display: block;
+        height: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        top: 48px;
+        left: 0;
+        right: 0;
+        padding: 0;
+        border-top: 1px solid #ddd; } }
   .navbar li {
     display: inline-block;
     float: right;
     list-style-type: none; }
-  .navbar li a, .navbar h1 a {
+    @media (max-width: 700px) {
+      .navbar li {
+        display: block;
+        height: 48px;
+        float: none; } }
+  .navbar li a,
+  .navbar h1 a {
     color: #00ACC1;
     font-size: 16px;
-    line-height: 56px;
+    line-height: 64px;
     text-decoration: none;
-    padding: 0 15px; }
-  .navbar li a:hover, .navbar h1 a:hover {
+    padding: 0 15px;
+    transition: color 0.25s; }
+    @media (max-width: 1000px) {
+      .navbar li a,
+      .navbar h1 a {
+        line-height: 56px; } }
+  @media (max-width: 700px) {
+    .navbar li a {
+      height: 35px;
+      left: 0;
+      right: 0;
+      position: absolute;
+      padding: 0 0 0 32px;
+      line-height: 40px; } }
+  .navbar li a:hover {
     color: #00E5FF; }
   .navbar h1 a {
     font-size: 20px;
     float: left;
     z-index: -1;
     padding: 0 32px; }
+    .navbar h1 a:hover {
+      color: #00E5FF; }
+    @media (max-width: 700px) {
+      .navbar h1 a {
+        line-height: 48px;
+        padding: 0 16px; } }
   .navbar a:visited {
     color: #00ACC1; }
-
-@media (max-width: 700px) {
-  .navbar #navbar-dropdown-menu {
-    height: 168px;
-    transition: height 200ms linear;
-    background-color: rgba(255, 255, 255, 0.9); }
-  .navbar button {
-    display: block;
-    float: right;
-    border-color: transparent;
-    margin: 10px 16px; }
-  .navbar ul {
-    display: block;
-    height: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    padding: 0;
-    border-top: 1px solid #ddd; }
-  .navbar li {
-    display: block;
-    height: 56px;
-    float: none; }
-  .navbar li a {
-    height: 35px;
-    left: 0;
-    right: 0;
-    position: absolute;
-    padding: 0 0 0 32px;
-    line-height: 40px; }
-  .navbar h1 a {
-    line-height: 56px;
-    padding: 0 16px; }
-  .navbar .hide {
-    height: 0px !important;
-    overflow: hidden; } }
 
 .hero {
   font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
