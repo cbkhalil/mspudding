@@ -313,7 +313,8 @@ html {
     display: inline-block;
     font-size: 16px;
     color: #00ACC1;
-    line-height: 64px; }
+    line-height: 64px;
+    /* Social Media Share Icon Buttons */ }
     .footer li a {
       z-index: 9999;
       color: #00ACC1;
@@ -328,6 +329,7 @@ html {
       height: 48px;
       margin: 8px 0 0 12px;
       color: #00ACC1;
-      transition: color 0.25s; }
+      transition: color 0.25s, box-shadow 0.25s; }
       .footer li i:hover {
-        color: #00E5FF; }
+        color: #00E5FF;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.24); }
