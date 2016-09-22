@@ -131,23 +131,23 @@ html {
     height: 0px !important;
     overflow: hidden; } }
 
-.hero-feature {
+.hero {
   font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
   color: white;
   position: relative;
   box-sizing: border-box; }
-  .hero-feature div {
+  .hero div {
     position: absolute;
     top: 68px;
     width: 100%;
     text-align: center; }
-  .hero-feature img {
+  .hero img {
     width: 100%; }
-  .hero-feature h1 {
+  .hero h1 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 40px;
     margin-top: 32px; }
-  .hero-feature a, .hero-feature a:visited {
+  .hero a, .hero a:visited {
     font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
     color: white;
@@ -155,80 +155,114 @@ html {
     font-size: 16px;
     display: block;
     margin: 32px auto;
+    transition: background 0.25s, box-shadow 0.25s, color 0.25s;
     /* Button Border */
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.55);
     border-radius: 4px;
     width: 160px; }
-  .hero-feature a:hover {
+  .hero a:hover {
     background: rgba(255, 255, 255, 0.6);
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
     color: #00ACC1; }
   @media (min-width: 800px) {
-    .hero-feature a, .hero-feature a:visited {
+    .hero a, .hero a:visited {
       font-size: 20px;
       line-height: 32px;
       width: 240px; } }
   @media (min-width: 1000px) {
-    .hero-feature div {
+    .hero div {
       top: 120px; }
-    .hero-feature h1 {
+    .hero h1 {
       font-size: 54px; }
-    .hero-feature a, .hero-feature a:visited {
+    .hero a, .hero a:visited {
       margin: 64px auto 32px auto; } }
   @media (min-width: 1400px) {
-    .hero-feature a, .hero-feature a:visited {
+    .hero a, .hero a:visited {
       margin: 160px auto 32px auto; } }
 
 .blog-preview-list {
   padding-right: 300px;
   position: relative; }
-  .blog-preview-list .sidebar {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 300px;
-    background-color: lightblue;
-    height: 800px; }
+  @media (max-width: 572px) {
+    .blog-preview-list {
+      padding: 0; } }
   .blog-preview-list ul {
     width: 100%;
     padding-top: 16px; }
+    @media (max-width: 572px) {
+      .blog-preview-list ul {
+        padding: 0; } }
   .blog-preview-list li {
     width: 100%;
     padding: 0 16px; }
-  .blog-preview-list a {
-    display: block;
-    width: 100%;
-    min-height: 192px;
-    padding-left: 192px;
-    position: relative;
-    border: 2px solid transparent;
-    transition: box-shadow 0.25s, border 0.25s, border-radius 0.25s;
-    /* Box for masking image preview */ }
-    .blog-preview-list a div {
-      position: absolute;
-      left: 32px;
-      top: 32px;
-      height: 128px;
-      width: 128px;
-      border-radius: 6px;
-      overflow: hidden; }
-  .blog-preview-list a:hover {
+    @media (max-width: 572px) {
+      .blog-preview-list li {
+        padding: 0; } }
+
+.hover-card {
+  display: block;
+  width: 100%;
+  min-height: 192px;
+  padding-left: 192px;
+  position: relative;
+  border: 2px solid transparent;
+  max-width: 700px;
+  min-width: 540px;
+  transition: box-shadow 0.25s, border 0.25s, border-radius 0.25s;
+  /* Box for masking image preview */ }
+  @media (max-width: 572px) {
+    .hover-card {
+      padding: 0 0 0 128px;
+      min-width: inherit;
+      min-height: 128px;
+      margin-bottom: 16px; } }
+  .hover-card figure {
+    position: absolute;
+    left: 32px;
+    top: 32px;
+    height: 128px;
+    width: 128px;
+    border-radius: 6px;
+    overflow: hidden; }
+    @media (max-width: 572px) {
+      .hover-card figure {
+        top: 16px;
+        left: 16px;
+        height: 96px;
+        width: 96px; } }
+    .hover-card figure img {
+      height: 128px; }
+      @media (max-width: 572px) {
+        .hover-card figure img {
+          height: 96px; } }
+  .hover-card:hover {
     /* Glowing border + shadow */
     border: 2px solid #00ACC1;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.24);
     border-radius: 4px; }
-  .blog-preview-list img {
-    height: 128px; }
-  .blog-preview-list .title {
-    font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
-    font-size: 22px;
-    margin-top: 24px;
-    font-weight: bold; }
-  .blog-preview-list p {
-    font-family: NotoSerif, serif;
+    .hover-card:hover h3 {
+      color: #00ACC1; }
+  .hover-card p,
+  .hover-card h3 {
     font-size: 16px;
     color: #607D8B;
     line-height: 32px;
     display: inline-block;
     padding: 8px 16px 0 0; }
+  .hover-card p {
+    font-family: NotoSerif, serif; }
+    @media (max-width: 572px) {
+      .hover-card p {
+        font-size: 14px;
+        line-height: 24px; } }
+  .hover-card h3 {
+    font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
+    font-size: 22px;
+    margin-top: 24px;
+    font-weight: bold; }
+    @media (max-width: 572px) {
+      .hover-card h3 {
+        font-size: 18px;
+        margin-top: 0;
+        line-height: 24px; } }

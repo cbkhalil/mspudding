@@ -63,13 +63,12 @@
   ]
 
 
-nav.blog-preview-list
-  ul
-    each article in articles
-      li
-        a(href=article.url)
-          div
-            img(src=article.image)
-          p.title #{article.title}
-          p #{article.preview}
-  div.sidebar
+ul.blog-preview-list
+  each article in articles
+    li
+      a(href=article.url).hover-card
+        figure
+          img(src=article.image)
+        h3 #{article.title}
+        p #{article.preview}
+div.sidebar
