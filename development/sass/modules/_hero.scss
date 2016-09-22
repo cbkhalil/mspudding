@@ -1,4 +1,4 @@
-.hero-feature {
+.hero {
   font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
   color: white; 
   position: relative;
@@ -12,7 +12,15 @@
   }
 
   img {
+    background: url("/resources/images/banners/pokemon-banner.jpg") no-repeat center center fixed; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
     width: 100%;
+    height: auto;
+    min-height: 350px;
+    min-width: 100%;
   }
 
 
