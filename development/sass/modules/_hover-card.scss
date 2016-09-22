@@ -1,4 +1,4 @@
-.blog-preview-list {
+.hover-card {
   padding-right: 300px;
   position:relative;
 
@@ -28,6 +28,8 @@
     padding-left: 192px;
     position:relative;
     border: 2px solid rgba(0,0,0,0);
+    max-width: 700px;
+    min-width: 540px;
     transition: box-shadow 0.25s, border 0.25s, border-radius 0.25s;
 
     /* Box for masking image preview */
@@ -67,4 +69,31 @@
     padding: 8px 16px 0 0;
   }
 
+
 }
+@media (max-width: 572px) {
+  .hover-card {
+    padding: 0;  
+    
+    ul {
+      padding: 0;
+    }
+    li {
+      padding: 0;
+    }
+
+    a {
+      min-width: inherit;
+    }
+
+    .title {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+}
+

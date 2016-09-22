@@ -131,81 +131,111 @@ html {
     height: 0px !important;
     overflow: hidden; } }
 
-.hero-feature {
+.hero {
   font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
   color: white;
   position: relative;
-  box-sizing: border-box; }
-  .hero-feature div {
+  box-sizing: border-box;
+  /* Container for title and button */
+  /* Background image */
+  /* Main title */
+  /* Read article button */ }
+  .hero div {
     position: absolute;
     top: 68px;
     width: 100%;
     text-align: center; }
-  .hero-feature img {
-    width: 100%; }
-  .hero-feature h1 {
+    @media (min-width: 1000px) {
+      .hero div {
+        top: 120px; } }
+  .hero img {
+    background: url("/resources/images/banners/pokemon-banner.jpg") no-repeat center 0 fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 100%;
+    height: 0;
+    padding-top: 38%; }
+    @media (max-width: 650px) {
+      .hero img {
+        background-position: 0 48px;
+        padding-top: 46%; } }
+  .hero h1 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 40px;
-    margin-top: 32px; }
-  .hero-feature a, .hero-feature a:visited {
+    margin-top: 32px;
+    opacity: 0.87; }
+    @media (max-width: 650px) {
+      .hero h1 {
+        font-size: 24px;
+        margin-top: 16px; } }
+    @media (min-width: 1000px) {
+      .hero h1 {
+        font-size: 54px; } }
+  .hero a {
     font-family: 'Source Sans Pro', sans-serif;
-    text-decoration: none;
     color: white;
     padding: 10px;
     font-size: 16px;
     display: block;
     margin: 32px auto;
+    transition: background 0.25s, box-shadow 0.25s, color 0.25s;
     /* Button Border */
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.55);
     border-radius: 4px;
     width: 160px; }
-  .hero-feature a:hover {
-    background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
-    color: #00ACC1; }
-  @media (min-width: 800px) {
-    .hero-feature a, .hero-feature a:visited {
-      font-size: 20px;
-      line-height: 32px;
-      width: 240px; } }
-  @media (min-width: 1000px) {
-    .hero-feature div {
-      top: 120px; }
-    .hero-feature h1 {
-      font-size: 54px; }
-    .hero-feature a, .hero-feature a:visited {
-      margin: 64px auto 32px auto; } }
-  @media (min-width: 1400px) {
-    .hero-feature a, .hero-feature a:visited {
-      margin: 160px auto 32px auto; } }
+    .hero a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.24);
+      color: #00ACC1; }
+    @media (max-width: 650px) {
+      .hero a {
+        padding: 4px;
+        margin: 24px auto;
+        font-size: 13px;
+        width: 128px; } }
+    @media (min-width: 800px) {
+      .hero a {
+        font-size: 20px;
+        line-height: 32px;
+        width: 240px; } }
+    @media (min-width: 1000px) {
+      .hero a {
+        margin: 64px auto 32px auto; } }
+    @media (min-width: 1400px) {
+      .hero a {
+        margin: 160px auto 32px auto; } }
 
-.blog-preview-list {
+.hover-card {
   padding-right: 300px;
   position: relative; }
-  .blog-preview-list .sidebar {
+  .hover-card .sidebar {
     position: absolute;
     right: 0;
     top: 0;
     width: 300px;
     background-color: lightblue;
     height: 800px; }
-  .blog-preview-list ul {
+  .hover-card ul {
     width: 100%;
     padding-top: 16px; }
-  .blog-preview-list li {
+  .hover-card li {
     width: 100%;
     padding: 0 16px; }
-  .blog-preview-list a {
+  .hover-card a {
     display: block;
     width: 100%;
     min-height: 192px;
     padding-left: 192px;
     position: relative;
     border: 2px solid transparent;
+    max-width: 700px;
+    min-width: 540px;
     transition: box-shadow 0.25s, border 0.25s, border-radius 0.25s;
     /* Box for masking image preview */ }
-    .blog-preview-list a div {
+    .hover-card a div {
       position: absolute;
       left: 32px;
       top: 32px;
@@ -213,22 +243,37 @@ html {
       width: 128px;
       border-radius: 6px;
       overflow: hidden; }
-  .blog-preview-list a:hover {
+  .hover-card a:hover {
     /* Glowing border + shadow */
     border: 2px solid #00ACC1;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.24);
     border-radius: 4px; }
-  .blog-preview-list img {
+  .hover-card img {
     height: 128px; }
-  .blog-preview-list .title {
+  .hover-card .title {
     font-family: SourceSansPro-Regular, "Source Sans Pro", sans-serif;
     font-size: 22px;
     margin-top: 24px;
     font-weight: bold; }
-  .blog-preview-list p {
+  .hover-card p {
     font-family: NotoSerif, serif;
     font-size: 16px;
     color: #607D8B;
     line-height: 32px;
     display: inline-block;
     padding: 8px 16px 0 0; }
+
+@media (max-width: 572px) {
+  .hover-card {
+    padding: 0; }
+    .hover-card ul {
+      padding: 0; }
+    .hover-card li {
+      padding: 0; }
+    .hover-card a {
+      min-width: inherit; }
+    .hover-card .title {
+      font-size: 18px; }
+    .hover-card p {
+      font-size: 14px;
+      line-height: 28px; } }
