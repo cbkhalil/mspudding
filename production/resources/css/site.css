@@ -131,54 +131,86 @@ html {
     height: 0px !important;
     overflow: hidden; } }
 
-.hero-feature {
+.hero {
   font-family: medium-content-sans-serif-font, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
-  color: white;
+  color: #FFF;
   position: relative;
-  box-sizing: border-box; }
-  .hero-feature div {
-    position: absolute;
-    top: 68px;
-    width: 100%;
-    text-align: center; }
-  .hero-feature img {
-    width: 100%; }
-  .hero-feature h1 {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  /* Background image */
+  /* Main title */
+  /* Read article button */ }
+  .hero h1 {
+    position: relative;
     font-family: 'Source Sans Pro', sans-serif;
+    top: -5em;
     font-size: 40px;
-    margin-top: 32px; }
-  .hero-feature a, .hero-feature a:visited {
+    margin-top: 32px;
+    opacity: 0.87; }
+    @media (max-width: 650px) {
+      .hero h1 {
+        font-size: 24px;
+        margin-top: 16px; } }
+    @media (min-width: 1000px) {
+      .hero h1 {
+        top: -5.5em; } }
+    @media (min-width: 1400px) {
+      .hero h1 {
+        font-size: 54px;
+        top: -120px; } }
+  .hero a {
+    position: relative;
     font-family: 'Source Sans Pro', sans-serif;
-    text-decoration: none;
     color: white;
     padding: 10px;
     font-size: 16px;
     display: block;
     margin: 32px auto;
+    transition: background 0.25s, box-shadow 0.25s, color 0.25s;
+    text-transform: uppercase;
     /* Button Border */
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.55);
     border-radius: 4px;
     width: 160px; }
-  .hero-feature a:hover {
-    background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
-    color: #00ACC1; }
-  @media (min-width: 800px) {
-    .hero-feature a, .hero-feature a:visited {
-      font-size: 20px;
-      line-height: 32px;
-      width: 240px; } }
-  @media (min-width: 1000px) {
-    .hero-feature div {
-      top: 120px; }
-    .hero-feature h1 {
-      font-size: 54px; }
-    .hero-feature a, .hero-feature a:visited {
-      margin: 64px auto 32px auto; } }
-  @media (min-width: 1400px) {
-    .hero-feature a, .hero-feature a:visited {
-      margin: 160px auto 32px auto; } }
+    .hero a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.24);
+      color: #00ACC1; }
+    @media (max-width: 650px) {
+      .hero a {
+        padding: 4px;
+        margin: 24px auto;
+        font-size: 13px;
+        width: 128px; } }
+    @media (min-width: 800px) {
+      .hero a {
+        font-size: 20px;
+        line-height: 32px;
+        width: 240px; } }
+    @media (min-width: 1000px) {
+      .hero a {
+        margin: 64px auto 32px auto;
+        top: -16em; } }
+    @media (min-width: 1400px) {
+      .hero a {
+        margin: 160px auto 32px auto;
+        top: -19em; } }
+
+.background-pokemon-banner {
+  background: url("/resources/images/banners/pokemon-banner.jpg") no-repeat center 0 fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  width: 100%;
+  height: 0;
+  padding-top: 38%; }
+  @media (max-width: 650px) {
+    .background-pokemon-banner {
+      background-position: 0 48px;
+      padding-top: 46%; } }
 
 .blog-preview-list {
   padding-right: 300px;
